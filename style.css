@@ -1,0 +1,220 @@
+.gallery {
+    display: grid;
+    gap: 40px; /* Adjusted for better spacing */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* More flexible layout */
+    width: 80%; /* Increased width for better alignment */
+    margin: 0 auto; /* Centering gallery */
+    justify-content: center; /* Aligning properly */
+    padding: 20px; /* More padding for spacing */
+}
+
+.gallery > img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 10px solid #f2f2f2;
+    box-shadow: 0 0 6px #0007; /* Slightly stronger shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.gallery > img:hover {
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+  
+  body {
+    margin: 0;
+    /* min-height: 100vh;
+    display: grid; */
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+  #hedlinecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+  
+  #shine {
+    font-size: 60px;
+    font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+    color: rgba(255, 0, 0, 0.3); /* Adjusted to red */
+    z-index: 10;
+    background: -webkit-gradient(linear, left top, right top, from(#800000), to(#800000), color-stop(0.5, #ff0000)) 0 0 no-repeat; /* Dark red to bright red */
+    -webkit-background-size: 150px;
+    -webkit-background-clip: text;
+    -webkit-animation-name: shine;
+    -webkit-animation-duration: 3s; /* Adjust the duration as needed */
+    -webkit-animation-iteration-count: infinite;
+    text-shadow: 0 0px 0px rgba(255, 0, 0, 0.419); /* Adjusted to red */
+}
+
+@-webkit-keyframes shine {
+    0%, 10% {
+      background-position: -1000px;
+    }
+    20% {
+      background-position: top left;
+    }
+    90% {
+      background-position: top right;
+    }
+    100% {
+      background-position: 1000px;
+    }
+}
+
+.wrapper {
+    /*This part is important for centering*/
+    display: grid;
+    justify-content:center;
+    margin-top:50px;
+  }
+  .wrapper-1 {
+    /*This part is important for centering*/
+    display: grid;
+    justify-content:center;
+    margin-top:120px;
+  }
+  .wrapper-2 {
+    /*This part is important for centering*/
+    display: grid;
+    justify-content:center;
+  }
+  .typing-demo {
+    width: 77ch;
+    animation: typing 7s steps(77), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  .typing-demo-1 {
+    width: 16ch;
+    animation: typing 3s steps(16), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  .typing-demo-2 {
+    width: 34ch;
+    animation: typing 3s steps(34), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+.img{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 50vh;
+}
+.img-1{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 40vh;
+}
+.img-1 > img{
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+.img > img{
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+.button-div{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+  .button{
+    background-color: #ff4d6d;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            animation: heartbeat 1.5s infinite;
+  }
+  .button:hover {
+    background-color: #ff1e4d;
+    transform: scale(1.1);
+}
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+@media only screen and (max-width: 600px) {
+    #shine {
+        font-size: 22px;
+        font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+        text-align: center;
+    }
+
+    #hedlinecontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .typing-demo,.typing-demo-1,.typing-demo-2{
+        font-size: 1em;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Ensures 2 images per row */
+        width: 90%; /* Takes up most of the screen */
+        margin: 0 auto; /* Centers the gallery */
+        gap: 40px; /* Adds space between images */
+        padding: 10px; /* Adds internal spacing */
+        justify-content: center;
+    }
+
+    .gallery > img {
+        width: 100%; /* Ensures images fully fit within their grid */
+        aspect-ratio: 1; /* Keeps images square */
+        object-fit: cover;
+        border: 5px solid #f2f2f2; /* Reduced border thickness for mobile */
+        box-shadow: 0 0 4px #0005; /* Lighter shadow for a clean look */
+    }
+}

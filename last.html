@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GayuHari</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Sheppards&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+    .button-container {
+            display: flex;
+            gap: 20px; /* Space between buttons */
+            margin-top: 50px;
+            justify-content: center;
+        }
+
+        .btn,.btn-1 {
+            background-color: #39e223;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-1{
+            background-color: #ff1e4d;
+        }
+        .btn:hover {
+            background-color: #036b03;
+            transform: scale(1.1);
+        }
+        .btn-1:hover {
+            background-color: #700606;
+            transform: scale(1.1);
+        }
+</style>
+</head>
+<body>
+    <div id="whole">
+        <div class="img-1"><img src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"></div>
+    <div class="wrapper-2">
+        <div class="typing-demo-2">
+              Will you stay with me forever ?😚
+        </div>
+    </div>
+    <div class="button-container">
+        <button id="yesBtn" class="btn">Yes</button>
+        <button class="btn-1" onclick="alert('Adi Venuma ! Kondruve 😡')">No</button>
+    </div>
+    </div>
+    <div id="whole-2" style="display: none;">
+        <div class="img-1"><img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" style="background-color:white"></div>
+        <div class="wrapper-2">
+            <div class="typing-demo-2">
+                Thank You very much Pookie !!! 🥰
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("yesBtn").onclick=function() {myFunction()};
+
+        function myFunction(){
+            document.getElementById("whole").style.display="none";
+            document.getElementById("whole-2").style.display="block";
+        }
+    </script>
+</body>
+</html>
